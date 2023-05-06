@@ -1,7 +1,7 @@
 {
   "name": "anyplot",
   "officialName": "anyplot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Visual Web Components based on G2.",
   "license": "MIT",
   "main": "lib/index.js",

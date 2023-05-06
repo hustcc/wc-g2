@@ -3,7 +3,6 @@
 > Visual `Web Components` based on [G2](https://g2.antv.antgroup.com/).
 
 [![Build Status](https://github.com/hustcc/anyplot/workflows/build/badge.svg)](https://github.com/hustcc/anyplot/actions)
-[![Coverage Status](https://coveralls.io/repos/github/hustcc/anyplot/badge.svg?branch=master)](https://coveralls.io/github/hustcc/anyplot?branch=master)
 [![npm Version](https://img.shields.io/npm/v/anyplot.svg)](https://www.npmjs.com/package/anyplot)
 [![npm Download](https://img.shields.io/npm/dm/anyplot.svg)](https://www.npmjs.com/package/anyplot)
 [![npm License](https://img.shields.io/npm/l/anyplot.svg)](https://www.npmjs.com/package/anyplot)
