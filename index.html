@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>anyplot: Visual Web Components based on G2.</title>
+  <script src="./dist/anyplot.min.js"></script>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <any-plot style="height: 100%; overflow: hidden;" spec='{"type":"line","theme":"classic","autoFit":true,"data":{"type":"fetch","value":"https://gw.alipayobjects.com/os/bmw-prod/551d80c6-a6be-4f3c-a82a-abd739e12977.csv"},"encode":{"x":"date","y":"close"}}'></any-plot>
+</body>
+
+</html>
