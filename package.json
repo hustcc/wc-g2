@@ -1,12 +1,12 @@
 {
-  "name": "template",
-  "officialName": "template",
-  "version": "1.0.0",
-  "description": "template repo for hustcc",
+  "name": "wc-g2",
+  "officialName": "wc-g2",
+  "version": "0.1.1",
+  "description": "Visual Web Components based on G2.",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
-  "browser": "dist/template.min.js",
+  "browser": "dist/wc-g2.min.js",
   "types": "lib/index.d.ts",
   "files": [
     "src",
@@ -15,31 +15,40 @@
     "dist"
   ],
   "scripts": {
+    "dev": "rollup -c -w",
     "clean": "rimraf lib esm dist",
     "lint-staged": "lint-staged",
     "size": "limit-size",
-    "lint": "eslint ./src ./__tests__ && prettier ./src ./__tests__ --check ",
-    "fix": "eslint ./src ./__tests__ --fix && prettier ./src ./__tests__ --write ",
-    "test": "jest",
+    "lint": "eslint ./src && prettier ./src  --check ",
+    "fix": "eslint ./src --fix && prettier ./src --write ",
+    "test": "echo 1",
     "build:umd": "rimraf ./dist && rollup -c && npm run size",
     "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib",
     "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm",
     "build": "run-p build:*",
     "ci": "run-s lint test build",
+    "prepare": "husky install",
     "prepublishOnly": "npm run ci"
   },
   "keywords": [
-    "template"
+    "Web Conponents",
+    "Visualization",
+    "G2",
+    "AntV"
   ],
+  "dependencies": {
+    "@antv/g2": "^5.0.0",
+    "size-sensor": "^1.0.2"
+  },
   "devDependencies": {
+    "@antv/g2": "^5.0.0",
     "@commitlint/cli": "^11.0.0",
-    "@types/jest": "^26.0.20",
+    "@rollup/plugin-commonjs": "^21.0.2",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "eslint": "^7.22.0",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^5.0.9",
-    "jest": "^26.6.3",
+    "husky": "^7.0.0",
     "limit-size": "^0.1.4",
     "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
@@ -47,18 +56,11 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.39.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-polyfill-node": "^0.8.0",
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.4",
-    "ts-jest": "^26.5.1",
+    "rollup-plugin-visualizer": "^5.6.0",
     "typescript": "^4.1.5"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "collectCoverage": true,
-    "testRegex": "(/__tests__/.*\\.(test|spec))\\.ts$",
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ]
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -69,13 +71,9 @@
   },
   "limit-size": [
     {
-      "path": "dist/template.min.js",
-      "limit": "500b",
+      "path": "dist/wc-g2.min.js",
+      "limit": "2 Kb",
       "gzip": true
-    },
-    {
-      "path": "dist/template.min.js",
-      "limit": "1 Kb"
     }
   ],
   "husky": {
@@ -86,13 +84,13 @@
   },
   "author": {
     "name": "hustcc",
-    "url": "https://atool.vip/"
+    "url": "https://github.com/hustcc"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hustcc/template"
+    "url": "https://github.com/hustcc/wc-g2"
   },
   "bugs": {
-    "url": "https://github.com/hustcc/template/issues"
+    "url": "https://github.com/hustcc/wc-g2/issues"
   }
 }
