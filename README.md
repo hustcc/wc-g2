@@ -1,6 +1,6 @@
 # wc-g2
 
-> `Web Component` for [G2](https://g2.antv.antgroup.com/).
+> 2Kb library `Web Component` for [G2](https://g2.antv.antgroup.com/).
 
 [![Build Status](https://github.com/hustcc/wc-g2/workflows/build/badge.svg)](https://github.com/hustcc/wc-g2/actions)
 [![npm Version](https://img.shields.io/npm/v/wc-g2.svg)](https://www.npmjs.com/package/wc-g2)

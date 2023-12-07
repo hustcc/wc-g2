@@ -2,7 +2,7 @@
   "name": "wc-g2",
   "officialName": "wc-g2",
   "version": "0.1.1",
-  "description": "Visual Web Components based on G2.",
+  "description": "2Kb Web Components for G2.",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "esm/index.js",
